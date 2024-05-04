@@ -1,0 +1,74 @@
+.gamebox {
+  margin: 2rem 3rem;
+  display: flex;
+  border: 2px solid var(--headclr);
+  border-radius: 22px;
+}
+.instr_box {
+  border-right: 2px solid var(--headclr);
+  padding: 2rem 3rem;
+  width: 520px;
+  line-height: 1.6;
+}
+.instr_box h2 {
+  text-align: center;
+  font-size: 35px;
+  color: var(--headclr);
+  margin-bottom: 12px;
+}
+.instr_box li {
+  margin-top: 10px;
+}
+.game {
+  padding: 2rem 3rem;
+  text-align: center;
+  width: 100%;
+}
+.range-get {
+  padding: 10px;
+}
+.range-get label {
+  color: var(--headclr);
+  font-size: 22px;
+  line-height: 2;
+}
+.range-get input {
+  background-color: var(--bckgcolor);
+  border: 2px solid var(--headclr);
+  border-radius: 50px;
+  text-align: center;
+  padding: 5px;
+}
+.btn {
+  padding: 6px 10px;
+  background-color: var(--headclr);
+  color: var(--bckgcolor);
+  border: none;
+  border-radius: 12px;
+  margin-left: 8px;
+}
+.btn:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  letter-spacing: 1.5px;
+}
+.game p {
+  margin: 25px;
+  color: var(--headclr);
+}
+.guess-no {
+  padding: 10px;
+  margin-top: 15px;
+}
+.guess-no label {
+  color: var(--headclr);
+  font-size: 22px;
+  line-height: 2;
+}
+.guess-no input {
+  background-color: var(--bckgcolor);
+  border: 2px solid var(--headclr);
+  border-radius: 50px;
+  text-align: center;
+  padding: 5px;
+}

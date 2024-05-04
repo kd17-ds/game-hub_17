@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/gg.css" />
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <div class="head_box">
+      <h1 class="main_heading animate__animated animate__backInLeft">
+        Guessing Game
+      </h1>
+      <img
+        class="animate__animated animate__rotateIn"
+        src="img/logo.png"
+        alt="Logo"
+      />
+    </div>
+    <div class="gamebox">
+      <div class="instr_box">
+        <h2>Instructions</h2>
+        <ul>
+          <li>
+            Begin by entering the maximum range within which you'd like to pick
+            a number.
+          </li>
+          <li>
+            Take your best guess at the number, keeping it within the specified
+            range.
+          </li>
+          <li>
+            Your number of attempts will be tracked as you try to find the
+            correct number.
+          </li>
+          <li>
+            You'll Receive helpful hints after each incorrect guess to guide you
+            closer to the answer.
+          </li>
+          <li>
+            Once you've guessed the correct number, feel free to play again!
+          </li>
+        </ul>
+      </div>
+      <div class="game">
+        <div class="range-get">
+          <label for="maxrange">Enter the Max. Range : &nbsp; </label>
+          <input type="number" id="maxrange" name="maxrange" />
+          <button class="btn" id="btn1">Go</button>
+        </div>
+      </div>
+      <div id="outputbox" class="outputbox"></div>
+    </div>
+    <script src="js/gg.js"></script>
+  </body>
+</html>

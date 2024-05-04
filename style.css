@@ -72,3 +72,10 @@ body {
   transition: 1s;
   transform: scale(1.02);
 }
+.endname {
+  margin: 5rem auto;
+  text-align: center;
+}
+.endname h1 {
+  font-size: 60px;
+}
