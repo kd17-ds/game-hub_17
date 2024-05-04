@@ -5,14 +5,70 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
-body {
-  background-color: #bccbbd;
+:root {
+  --bckgcolor: #bccbbd;
+  --cardbkg: #799692;
+  --headclr: #2f4858;
+  --shadow: #5c7c7f;
 }
-
-.main_heading {
-  color: #2f4858;
-  text-align: center;
-  margin: 2.5rem;
-  font-size: 3.2rem;
+body {
+  background-color: var(--bckgcolor);
+}
+.head_box {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 6rem;
+  align-items: center;
+}
+.head_box img {
+  height: 4.3rem;
+}
+.head_box h1 {
+  color: var(--headclr);
+  font-size: 4rem;
+}
+.card_container {
+  margin: 3rem auto;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.card {
+  width: 410px;
+  padding: 25px;
+  border: 4px solid var(--headclr);
+  border-radius: 22px;
+  background-color: var(--cardbkg);
+  line-height: 1.6;
+}
+.card2 {
+  margin-top: 110px;
+}
+.card h5 {
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+.card h6 {
+  line-height: 2;
+}
+.card a {
+  border-radius: 30px;
+  padding: 10px;
+  width: 120px;
+  background-color: var(--headclr);
+  color: var(--bckgcolor);
+  align-self: flex-end;
+}
+.card a:hover {
+  transform: scale(1.1);
+  background-color: var(--headclr);
+  color: var(--bckgcolor);
+  transition: 1s;
+  letter-spacing: 1.5px;
+}
+.card:hover {
+  box-shadow: 8px 10px 8px var(--shadow);
+  transition: 1s;
+  transform: scale(1.02);
 }
