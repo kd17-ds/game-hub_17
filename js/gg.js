@@ -39,6 +39,7 @@ function btn1Press() {
     </div>`;
 
     btn1.disabled = true;
+    input.disabled = true;
     input.value = "";
   }
 }
