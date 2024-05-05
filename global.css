@@ -27,3 +27,11 @@ body {
   color: var(--headclr);
   font-size: 3.5rem;
 }
+.endname {
+  margin: 5rem auto;
+  text-align: center;
+  color: var(--headclr);
+}
+.endname h1 {
+  font-size: 60px;
+}

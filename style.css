@@ -74,6 +74,7 @@ body {
 }
 .endname {
   margin: 5rem auto;
+  color: var(--headclr);
   text-align: center;
 }
 .endname h1 {
