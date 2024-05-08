@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Says Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/simonsays.css" />
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <div class="head_box">
+      <h1 class="main_heading animate__animated animate__backInLeft">
+        Simon Says Game
+      </h1>
+      <img
+        class="animate__animated animate__rotateIn"
+        src="img/logo.png"
+        alt="Logo"
+      />
+    </div>
+    <div class="gamebox animate__animated animate__fadeInUp">
+      <div class="instr_box">
+        <h2>Instructions</h2>
+        <ul>
+          <li>Press the "Start" button to begin the game.</li>
+          <li>
+            Watch carefully as Simon displays a sequence of colors by lighting
+            them up.
+          </li>
+          <li>
+            After Simon's sequence, repeat the same sequence by clicking the
+            colors in the same order.
+          </li>
+          <li>
+            If you correctly repeat the sequence, Simon will add another color
+            to the sequence. If you make a mistake, the game ends.
+          </li>
+          <li>The game continues until you make a mistake.</li>
+
+          <li>Try to reach the highest score and challenge your friends!</li>
+        </ul>
+      </div>
+      <div class="game">
+        <div class="startbtn">
+          <button class="btn" id="btn">Start</button>
+        </div>
+        <div class="sghead hide">
+          <h2 id="lvl">Level : 1</h2>
+          <div class="simongame hide">
+            <div class="color green animate__animated" id="green"></div>
+            <div class="color blue animate__animated" id="blue"></div>
+            <div class="color yellow animate__animated" id="yellow"></div>
+            <div class="color red animate__animated" id="red"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="endname">
+      <h1>D.S</h1>
+      <p>Divyansh Sharma © All rights reserved.</p>
+    </div>
+    <script src="js/simonsays.js"></script>
+  </body>
+</html>

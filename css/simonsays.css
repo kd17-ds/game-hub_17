@@ -1,0 +1,83 @@
+.gamebox {
+  margin: 2rem 3rem;
+  display: flex;
+  border: 2px solid var(--headclr);
+  border-radius: 22px;
+}
+.instr_box {
+  border-right: 2px solid var(--headclr);
+  padding: 2rem 3rem;
+  width: 630px;
+  line-height: 1.6;
+}
+.instr_box h2 {
+  text-align: center;
+  font-size: 34px;
+  color: var(--headclr);
+  margin-bottom: 12px;
+}
+.instr_box li {
+  margin-top: 10px;
+}
+.game {
+  padding: 2rem 3rem;
+  text-align: center;
+  width: 100%;
+}
+.startbtn button {
+  position: absolute;
+  top: 43%;
+  left: 63%;
+  padding: 14px 20px;
+  background-color: var(--headclr);
+  color: var(--bckgcolor);
+  border: none;
+  border-radius: 22px;
+  font-size: 22px;
+  letter-spacing: 4px;
+}
+.startbtn button:hover {
+  letter-spacing: 4px;
+  transform: scale(1.2);
+  transition: 1s;
+}
+.simongame {
+  margin: 2px auto;
+  width: 440px;
+  height: 440px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  border: 8px solid black;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.color {
+  width: 100%;
+  height: 100%;
+}
+.yellow {
+  background-color: #acff2fd0;
+  border-right: 4px solid black;
+  border-top: 4px solid black;
+}
+.green {
+  background-color: #008000d0;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+}
+.blue {
+  background-color: #0000ffd0;
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
+}
+.red {
+  background-color: #ff0000d0;
+  border-left: 4px solid black;
+  border-top: 4px solid black;
+}
+
+.hide {
+  display: none;
+}
