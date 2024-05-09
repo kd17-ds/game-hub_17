@@ -27,10 +27,7 @@
         <h2>Instructions</h2>
         <ul>
           <li>Press the "Start" button to begin the game.</li>
-          <li>
-            Watch carefully as Simon displays a sequence of colors by lighting
-            them up.
-          </li>
+          <li>Watch carefully as Simon lights up a sequence of colors.</li>
           <li>
             After Simon's sequence, repeat the same sequence by clicking the
             colors in the same order.
@@ -40,8 +37,11 @@
             to the sequence. If you make a mistake, the game ends.
           </li>
           <li>The game continues until you make a mistake.</li>
-
           <li>Try to reach the highest score and challenge your friends!</li>
+          <li>
+            Each level adds one additional color to the sequence, increasing the
+            difficulty.
+          </li>
         </ul>
       </div>
       <div class="game">
@@ -49,14 +49,15 @@
           <button class="btn" id="btn">Start</button>
         </div>
         <div class="sghead hide">
-          <h2 id="lvl">Level : 1</h2>
-          <div class="simongame hide">
+          <h2 id="lvl">Let's Go</h2>
+          <div class="simongame">
             <div class="color green animate__animated" id="green"></div>
             <div class="color blue animate__animated" id="blue"></div>
             <div class="color yellow animate__animated" id="yellow"></div>
             <div class="color red animate__animated" id="red"></div>
           </div>
         </div>
+        <div class="result hide"></div>
       </div>
     </div>
     <div class="endname">

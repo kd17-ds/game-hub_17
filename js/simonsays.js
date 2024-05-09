@@ -1,6 +1,6 @@
 let startBtnbox = document.querySelector(".startbtn");
 let startbtn = document.querySelector("#btn");
-let simongame = document.querySelector(".simongame");
+let simongame = document.querySelector(".sghead");
 let giveseq = [];
 let green = document.querySelector(".green");
 let blue = document.querySelector(".blue");
@@ -10,36 +10,59 @@ let colorArr = ["green", "red", "yellow", "blue"];
 let userSeq = [];
 let level = 0;
 let lvl = document.querySelector("#lvl");
+let result = document.querySelector(".result");
 
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// Switching boxes on start press
 
 startbtn.addEventListener("click", function () {
   startBtnbox.classList.toggle("hide");
   simongame.classList.toggle("hide");
 
-  levelUp();
+  colorDecider();
   userClick();
 });
+
+// Generating a random integer to flash color
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Creating a random color to flash
+
+function colorDecider() {
+  userSeq = [];
+  console.log("inside level up");
+  let randnum = getRndInteger(0, 3);
+  giveseq.push(colorArr[randnum]);
+  let colorName = document.getElementById(colorArr[randnum]);
+  flashcolor(colorName);
+}
+
+// Flashing a color
 
 function flashcolor(colorname) {
   colorname.classList.add("animate__flash");
   setTimeout(() => {
     colorname.classList.remove("animate__flash");
-  }, 700);
+  }, 1000);
 }
+
+// Creating all colors clickable
 
 function userClick() {
   let colors = document.querySelectorAll(".color");
   for (clr of colors) {
-    clr.addEventListener("click", clickUser);
+    clr.addEventListener("click", checkClick);
   }
 }
 
-function clickUser() {
+// Functionality on user click
+
+function checkClick() {
   console.log("box click");
   let clickedbox = this;
+  console.log(clickedbox);
   flashcolor(clickedbox);
   let clickedColor = clickedbox.getAttribute("id");
   console.log(clickedColor);
@@ -49,22 +72,48 @@ function clickUser() {
   console.log(giveseq);
 }
 
+// Checking the correct sequence
+
 function checkAns(index) {
   if (userSeq[index] === giveseq[index]) {
+    console.log("Same element");
     if (userSeq.length === giveseq.length) {
-      setTimeout(levelUp, 1000);
+      console.log("same length");
+      setTimeout(colorDecider, 1200);
+      level++;
+      console.log(level);
+      lvl.innerText = `Sequence is Correct, You reached Level : ${level} `;
     }
+  } else {
+    let highscore = highScore(level);
+    result.innerHTML = ` <h2>Wrong sequence Entered</h2>
+    <h4>Your Score : ${level}</h4>
+    <h4>Highest Score : ${highscore}</h4>
+    <button id="resultbtn" onclick = "onRestart()"> Restart </button>`;
+
+    simongame.classList.toggle("hide");
+    result.classList.toggle("hide");
   }
 }
 
-function levelUp() {
-  console.log("inside level up");
-  userSeq = [];
-  level++;
-  lvl.innerText = `Level : ${level}`;
+//Calculating higscore
 
-  let randnum = getRndInteger(0, 3);
-  giveseq.push(colorArr[randnum]);
-  let colorName = document.getElementById(colorArr[randnum]);
-  flashcolor(colorName);
+let highestScore = 0;
+
+function highScore(level) {
+  if (level > highestScore) {
+    highestScore = level;
+  }
+  return highestScore;
+}
+
+// Restarting game
+
+function onRestart() {
+  result.classList.toggle("hide");
+  startBtnbox.classList.toggle("hide");
+  level = 0;
+  userSeq = [];
+  giveseq = [];
+  lvl.innerText = `Let's Go `;
 }
