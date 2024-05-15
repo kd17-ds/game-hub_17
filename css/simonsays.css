@@ -40,6 +40,7 @@
   letter-spacing: 4px;
   transform: scale(1.2);
   transition: 1s;
+  cursor: pointer;
 }
 .sghead {
   margin: 16px auto;
@@ -64,6 +65,11 @@
 .color {
   width: 100%;
   height: 100%;
+}
+.color:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 1s;
 }
 .yellow {
   background-color: #acff2fd0;
@@ -112,6 +118,7 @@
   letter-spacing: 3px;
   transform: scale(1.2);
   transition: 1s;
+  cursor: pointer;
 }
 .hide {
   display: none;

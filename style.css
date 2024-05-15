@@ -23,19 +23,36 @@ body {
 .head_box img {
   height: 4.3rem;
 }
+.head_box a:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
 .head_box h1 {
   color: var(--headclr);
   font-size: 4rem;
 }
-.card_container {
+.maincontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   margin: 3rem auto;
+  padding: 1rem 6rem;
+}
+.card_container {
   display: flex;
   gap: 50px;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.card_container2 {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
   align-items: flex-start;
 }
 .card {
-  width: 410px;
+  width: 400px;
   padding: 25px;
   border: 4px solid var(--headclr);
   border-radius: 22px;
@@ -43,7 +60,9 @@ body {
   line-height: 1.6;
 }
 .card2 {
-  margin-top: 110px;
+  position: absolute;
+  top: calc(50% - 205px);
+  left: calc(50% - 200px);
 }
 .card h5 {
   letter-spacing: 2px;
@@ -73,7 +92,7 @@ body {
   transform: scale(1.02);
 }
 .endname {
-  margin: 5rem auto;
+  margin: 3.5rem auto;
   color: var(--headclr);
   text-align: center;
 }

@@ -23,6 +23,10 @@ body {
 .head_box img {
   height: 4.3rem;
 }
+.head_box a:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
 .head_box h1 {
   color: var(--headclr);
   font-size: 3.5rem;

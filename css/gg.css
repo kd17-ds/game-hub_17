@@ -51,6 +51,7 @@
   transform: scale(1.1);
   transition: 1s;
   letter-spacing: 1.5px;
+  cursor: pointer;
 }
 .game p {
   margin: 25px;
