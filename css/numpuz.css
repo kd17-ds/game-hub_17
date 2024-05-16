@@ -1,0 +1,54 @@
+.gamebox {
+  margin: 2rem 3rem;
+  display: flex;
+  border: 2px solid var(--headclr);
+  border-radius: 22px;
+}
+.instr_box {
+  border-right: 2px solid var(--headclr);
+  padding: 2rem 3rem;
+  width: 620px;
+  line-height: 1.6;
+}
+.instr_box h2 {
+  text-align: center;
+  font-size: 35px;
+  color: var(--headclr);
+  margin-bottom: 12px;
+}
+.instr_box li {
+  margin-top: 10px;
+}
+.game {
+  padding: 2rem 3rem;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.game h2 {
+  text-align: center;
+  font-size: 35px;
+  color: var(--headclr);
+  margin-bottom: 16px;
+}
+.puzzlebox {
+  margin: 3px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.puzzlerow {
+  display: flex;
+  gap: 2px;
+}
+.puzzlerow .btn {
+  background-color: var(--bkcgcolor);
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid var(--headclr);
+  font-size: 16px;
+  color: var(--headclr);
+}
