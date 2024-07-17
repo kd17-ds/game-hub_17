@@ -6,7 +6,6 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
 body {
   background-image: linear-gradient(
     to right,
@@ -15,7 +14,6 @@ body {
     #7a828f 100%
   );
 }
-
 .container {
   position: relative;
   display: grid;
@@ -23,32 +21,13 @@ body {
   height: 100vh;
   width: 100vw;
 }
-
 .start_box {
   position: absolute;
   text-align: center;
-
-  transition: 1s;
+  animation: rotate 3s ease;
 }
 
-.start_box img {
-  width: 350px;
-  border: 5px solid #207768;
-  border-radius: 100px;
-}
-
-.rotate {
-  transform: rotate(360deg);
-  transition: 3s;
-}
-
-.image_box {
-  position: absolute;
-  width: 600px;
-  height: 500px;
-  animation: revolve 3s ease;
-}
-@keyframes revolve {
+@keyframes rotate {
   from {
     transform: rotate(0deg);
   }
@@ -57,17 +36,37 @@ body {
   }
 }
 
-.hide {
-  display: none;
+.start_box img {
+  width: 350px;
+  border: 5px solid #207768;
+  border-radius: 100px;
+}
+.image_box {
+  position: absolute;
+  width: 600px;
+  height: 500px;
+  animation: revolve 3s ease;
+}
+
+@keyframes revolve {
+  from {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
 }
 
 .start {
   position: absolute;
 }
+
 .gg {
   top: -40px;
   left: 262.5px;
-  animation: moveout 1s ease-in-out;
+  animation: moveout 3s ease-in-out;
 }
 @keyframes moveout {
   from {
@@ -81,7 +80,7 @@ body {
 }
 .pz {
   top: 127px;
-  animation: moveout1 1.5s ease-in-out;
+  animation: moveout1 3s ease-in-out;
 }
 @keyframes moveout1 {
   from {
@@ -95,7 +94,7 @@ body {
 
 .mg {
   bottom: 80px;
-  animation: moveout3 2s ease-in-out;
+  animation: moveout3 3s ease-in-out;
 }
 @keyframes moveout3 {
   from {
@@ -109,7 +108,7 @@ body {
 .ttt {
   bottom: 80px;
   right: 0px;
-  animation: moveout4 2.5s ease-in-out;
+  animation: moveout4 3s ease-in-out;
 }
 @keyframes moveout4 {
   from {
@@ -136,12 +135,66 @@ body {
     right: 0px;
   }
 }
+.gamedetails {
+  width: 400px;
+  text-align: center;
+  background-image: linear-gradient(
+    to right,
+    #e5e4e6 35%,
+    #8f95a3,
+    #7a828f 100%
+  );
+  border-radius: 50px;
+  padding: 32px 25px;
+  border: 5px solid #333a41;
+}
+
+.gametitle {
+  margin-bottom: 25px;
+  color: #18574c;
+  text-align: left;
+}
+.gamedescr {
+  text-align: left;
+}
+.playbtn {
+  float: right;
+  margin-top: 10px;
+  padding: 10px;
+  background-image: linear-gradient(
+    to right,
+    #e5e4e6 35%,
+    #8f95a3,
+    #7a828f 100%
+  );
+  border-radius: 16px;
+  border: 2px solid #18574c;
+  text-decoration: none;
+  color: #333a41;
+}
+.cross {
+  float: right;
+  border-radius: 1000px;
+  padding: 5px 12px;
+  border: 2px solid #333a41;
+  background-color: #828a97;
+}
 
 .endname {
   position: absolute;
-  bottom: 3px;
+  bottom: 15px;
   left: calc(50% - 174px);
   text-align: center;
+  animation: entrance 5s ease;
+}
+
+@keyframes entrance {
+  from {
+    transform: translateY(500px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 .endname h1 {
   font-size: 55px;
@@ -156,4 +209,7 @@ body {
 .endname p {
   font-size: 18px;
   color: #333a41;
+}
+.hide {
+  display: none;
 }
