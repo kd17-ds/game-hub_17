@@ -1,23 +1,28 @@
 .gamebox {
   margin: 2rem 3rem;
   display: flex;
-  border: 2px solid var(--headclr);
+  border: 1px solid var(--mainclr);
   border-radius: 22px;
 }
 .instr_box {
-  border-right: 2px solid var(--headclr);
+  border-right: 1px solid var(--mainclr);
   padding: 2rem 3rem;
-  width: 620px;
+  width: 680px;
   line-height: 1.6;
 }
 .instr_box h2 {
   text-align: center;
   font-size: 35px;
-  color: var(--headclr);
+  color: var(--mainclr);
   margin-bottom: 12px;
+  font-weight: 400;
+  letter-spacing: 4px;
 }
 .instr_box li {
   margin-top: 10px;
+  color: var(--mainclr);
+  font-weight: 125;
+  letter-spacing: 1px;
 }
 .game {
   padding: 2rem 3rem;
@@ -30,8 +35,11 @@
 .game h2 {
   text-align: center;
   font-size: 35px;
-  color: var(--headclr);
+  color: var(--mainclr);
   margin-bottom: 16px;
+  font-weight: 325;
+  letter-spacing: 5px;
+  text-shadow: 4px 6px 8px var(--shadow);
 }
 .puzzlebox {
   margin: 3px auto;
@@ -48,7 +56,7 @@
   width: 50px;
   height: 50px;
   border-radius: 8px;
-  border: 2px solid var(--headclr);
+  border: 1px solid var(--mainclr);
   font-size: 16px;
-  color: var(--headclr);
+  color: var(--mainclr);
 }

@@ -66,7 +66,7 @@
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  border: 8px solid black;
+  border: 4px solid black;
   border-radius: 100px;
   overflow: hidden;
 }
@@ -76,28 +76,32 @@
 }
 .color:hover {
   cursor: pointer;
-  transform: scale(1.05);
-  transition: 1s;
 }
 .yellow {
-  background-color: #acff2fd0;
-  border-right: 4px solid black;
-  border-top: 4px solid black;
+  background-color: #114750;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
 }
 .green {
-  background-color: #008000d0;
-  border-right: 4px solid black;
-  border-bottom: 4px solid black;
+  background-color: #056b66;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
 }
 .blue {
-  background-color: #0000ffd0;
-  border-left: 4px solid black;
-  border-bottom: 4px solid black;
+  background-color: #94d276;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
 }
 .red {
-  background-color: #ff0000d0;
-  border-left: 4px solid black;
-  border-top: 4px solid black;
+  background-color: #41a57b;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+}
+.colorFlash {
+  background-color: white;
+}
+.userFlash {
+  background-color: greenyellow;
 }
 .result {
   margin-top: 100px;
@@ -108,13 +112,15 @@
   font-weight: 150;
   letter-spacing: 3px;
   margin-bottom: 25px;
+  text-shadow: 4px 6px 8px var(--shadow);
 }
 .result h4 {
   font-size: 30px;
   margin-top: 10px;
   color: var(--mainclr);
-  font-weight: 400;
+  font-weight: 200;
   letter-spacing: 3px;
+  text-shadow: 4px 6px 8px var(--shadow);
 }
 .result button {
   margin-top: 25px;

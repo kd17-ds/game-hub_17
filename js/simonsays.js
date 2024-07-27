@@ -39,13 +39,22 @@ function colorDecider() {
   flashcolor(colorName);
 }
 
-// Flashing a color
+// Flashing a color Randomly
 
 function flashcolor(colorname) {
-  colorname.classList.add("animate__flash");
+  colorname.classList.add("colorFlash");
   setTimeout(() => {
-    colorname.classList.remove("animate__flash");
+    colorname.classList.remove("colorFlash");
   }, 1000);
+}
+
+// Flashing a color on click
+
+function flashclickedcolor(colorname) {
+  colorname.classList.add("userFlash");
+  setTimeout(() => {
+    colorname.classList.remove("userFlash");
+  }, 250);
 }
 
 // Creating all colors clickable
@@ -63,7 +72,7 @@ function checkClick() {
   console.log("box click");
   let clickedbox = this;
   console.log(clickedbox);
-  flashcolor(clickedbox);
+  flashclickedcolor(clickedbox);
   let clickedColor = clickedbox.getAttribute("id");
   console.log(clickedColor);
   userSeq.push(clickedColor);
@@ -86,7 +95,7 @@ function checkAns(index) {
     }
   } else {
     let highscore = highScore(level);
-    result.innerHTML = ` <h2>Wrong sequence Entered</h2>
+    result.innerHTML = ` <h2>" Ohh !! Wrong sequence Entered "</h2>
     <h4>Your Score : ${level}</h4>
     <h4>Highest Score : ${highscore}</h4>
     <button id="resultbtn" onclick = "onRestart()"> Restart </button>`;

@@ -105,8 +105,9 @@
   color: var(--mainclr);
   font-size: 26px;
   margin-top: 30px;
-  font-weight: 125;
-  letter-spacing: 1px;
+  font-weight: 325;
+  letter-spacing: 3px;
+  text-shadow: 4px 6px 8px var(--shadow);
 }
 .btn3 {
   margin-top: 50px;
