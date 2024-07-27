@@ -6,10 +6,9 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --bckgcolor: #bccbbd;
-  --cardbkg: #799692;
-  --headclr: #2f4858;
-  --shadow: #5c7c7f;
+  --bckgcolor: #151d22;
+  --mainclr: #fefefe;
+  --shadow: #7a828f;
 }
 body {
   background-color: var(--bckgcolor);
@@ -20,22 +19,36 @@ body {
   margin: 1.5rem 4rem;
   align-items: center;
 }
-.head_box img {
-  height: 4.3rem;
-}
-.head_box a:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
+
 .head_box h1 {
-  color: var(--headclr);
-  font-size: 3.5rem;
+  color: var(--mainclr);
+  font-size: 3.4rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-shadow: 4px 6px 8px var(--shadow);
 }
 .endname {
-  margin: 5rem auto;
   text-align: center;
-  color: var(--headclr);
+  animation: entrance 4s ease;
+}
+@keyframes entrance {
+  from {
+    transform: translateY(500px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 .endname h1 {
-  font-size: 60px;
+  color: var(--mainclr);
+  font-size: 55px;
+  font-weight: 600;
+  text-shadow: 2px 3px 4px var(--shadow);
+  letter-spacing: 4px;
+}
+.endname p {
+  font-size: 18px;
+  color: var(--mainclr);
+  font-weight: 125;
+  letter-spacing: 2px;
 }

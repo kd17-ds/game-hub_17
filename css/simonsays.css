@@ -1,23 +1,28 @@
 .gamebox {
   margin: 2rem 3rem;
   display: flex;
-  border: 2px solid var(--headclr);
+  border: 1px solid var(--mainclr);
   border-radius: 22px;
 }
 .instr_box {
-  border-right: 2px solid var(--headclr);
-  padding: 2rem 3rem;
-  width: 630px;
-  line-height: 1.6;
+  border-right: 1px solid var(--mainclr);
+  padding: 1.5rem 3rem;
+  width: 730px;
+  line-height: 1.5;
 }
 .instr_box h2 {
   text-align: center;
-  font-size: 34px;
-  color: var(--headclr);
+  font-size: 35px;
+  color: var(--mainclr);
   margin-bottom: 12px;
+  font-weight: 400;
+  letter-spacing: 4px;
 }
 .instr_box li {
   margin-top: 10px;
+  color: var(--mainclr);
+  font-weight: 125;
+  letter-spacing: 1px;
 }
 .game {
   padding: 2rem 3rem;
@@ -29,11 +34,12 @@
   top: 43%;
   left: 63%;
   padding: 14px 20px;
-  background-color: var(--headclr);
+  background-color: var(--mainclr);
   color: var(--bckgcolor);
   border: none;
   border-radius: 22px;
   font-size: 22px;
+  font-weight: 500;
   letter-spacing: 4px;
 }
 .startbtn button:hover {
@@ -47,7 +53,9 @@
 }
 .sghead h2 {
   font-size: 22px;
-  color: var(--headclr);
+  color: var(--mainclr);
+  font-weight: 250;
+  letter-spacing: 2px;
   margin-bottom: 30px;
 }
 .simongame {
@@ -96,23 +104,28 @@
 }
 .result h2 {
   font-size: 34px;
-  color: var(--headclr);
-  margin-bottom: 15px;
+  color: var(--mainclr);
+  font-weight: 150;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
 }
 .result h4 {
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 10px;
-  color: var(--headclr);
+  color: var(--mainclr);
+  font-weight: 400;
+  letter-spacing: 3px;
 }
 .result button {
   margin-top: 25px;
   padding: 12px 16px;
-  background-color: var(--headclr);
+  background-color: var(--mainclr);
   color: var(--bckgcolor);
   border: none;
   border-radius: 22px;
   font-size: 18px;
   letter-spacing: 2px;
+  font-weight: 400;
 }
 .result button:hover {
   letter-spacing: 3px;

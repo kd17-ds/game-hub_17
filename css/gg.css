@@ -1,23 +1,28 @@
 .gamebox {
   margin: 2rem 3rem;
   display: flex;
-  border: 2px solid var(--headclr);
+  border: 1px solid var(--mainclr);
   border-radius: 22px;
 }
 .instr_box {
-  border-right: 2px solid var(--headclr);
+  border-right: 1px solid var(--mainclr);
   padding: 2rem 3rem;
-  width: 520px;
+  width: 530px;
   line-height: 1.6;
 }
 .instr_box h2 {
   text-align: center;
   font-size: 35px;
-  color: var(--headclr);
+  color: var(--mainclr);
   margin-bottom: 12px;
+  font-weight: 400;
+  letter-spacing: 4px;
 }
 .instr_box li {
   margin-top: 10px;
+  color: var(--mainclr);
+  font-weight: 125;
+  letter-spacing: 1px;
 }
 .game {
   padding: 2rem 3rem;
@@ -28,24 +33,31 @@
   padding: 10px;
 }
 .range-get label {
-  color: var(--headclr);
+  color: var(--mainclr);
   font-size: 22px;
+  font-weight: 125;
+  letter-spacing: 1px;
   line-height: 2;
 }
 .range-get input {
   background-color: var(--bckgcolor);
-  border: 2px solid var(--headclr);
+  border: 1px solid var(--mainclr);
+  color: var(--mainclr);
+  font-weight: 125;
+  letter-spacing: 1px;
   border-radius: 50px;
   text-align: center;
   padding: 5px;
 }
 .btn {
   padding: 6px 10px;
-  background-color: var(--headclr);
+  background-color: var(--mainclr);
   color: var(--bckgcolor);
+  font-weight: 500;
+  letter-spacing: 1px;
   border: none;
   border-radius: 12px;
-  margin-left: 8px;
+  margin-left: 10px;
 }
 .btn:hover {
   transform: scale(1.1);
@@ -55,35 +67,46 @@
 }
 .game p {
   margin: 25px;
-  color: var(--headclr);
+  color: var(--mainclr);
+  font-weight: 305;
+  letter-spacing: 1px;
 }
 .guess-no {
   padding: 10px;
   margin-top: 15px;
 }
 .guess-no label {
-  color: var(--headclr);
+  color: var(--mainclr);
   font-size: 22px;
   line-height: 2;
+  font-weight: 125;
+  letter-spacing: 1px;
 }
 .guess-no input {
   background-color: var(--bckgcolor);
-  border: 2px solid var(--headclr);
+  border: 1px solid var(--mainclr);
   border-radius: 50px;
   text-align: center;
   padding: 5px;
+  color: var(--mainclr);
+  font-weight: 125;
+  letter-spacing: 1px;
 }
 .outputbox {
   margin-top: 35px;
 }
 .outputbox h4 {
-  color: var(--headclr);
+  color: var(--mainclr);
   font-size: 22px;
+  font-weight: 125;
+  letter-spacing: 1px;
 }
 .outputbox h3 {
-  color: var(--headclr);
+  color: var(--mainclr);
   font-size: 26px;
   margin-top: 30px;
+  font-weight: 125;
+  letter-spacing: 1px;
 }
 .btn3 {
   margin-top: 50px;

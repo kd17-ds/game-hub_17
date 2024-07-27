@@ -7,8 +7,14 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --bckgcolor: #151d22;
+  --mainclr: #fefefe;
+  --shadow: #7a828f;
+}
+
 body {
-  background-color: #151d22;
+  background-color: var(--bckgcolor);
 }
 
 .container {
@@ -56,7 +62,7 @@ body {
 .image_box img {
   width: 80px;
   height: 80px;
-  border: 2px solid #fefefe;
+  border: 2px solid var(--mainclr);
   border-radius: 1000px;
 }
 
@@ -194,17 +200,17 @@ body {
 .gamedetails {
   width: 450px;
   text-align: center;
-  color: #fefefe;
+  color: var(--mainclr);
   font-weight: 150;
   letter-spacing: 2px;
   line-height: 1.8;
   border-radius: 50px;
   padding: 35px;
-  border: 3px dashed #fefefe;
+  border: 3px dashed var(--mainclr);
 }
 .gametitle {
   margin-bottom: 25px;
-  color: #fefefe;
+  color: var(--mainclr);
   font-weight: 600;
   letter-spacing: 3px;
   text-align: left;
@@ -217,9 +223,9 @@ body {
   margin-top: 15px;
   padding: 10px 12px;
   border-radius: 16px;
-  border: 2px solid #fefefe;
+  border: 2px solid var(--mainclr);
   text-decoration: none;
-  color: #fefefe;
+  color: var(--mainclr);
 }
 .playbtn:hover {
   cursor: pointer;
@@ -230,9 +236,9 @@ body {
   float: right;
   border-radius: 1000px;
   padding: 6px 14px;
-  border: 1px solid #fefefe;
-  background-color: #151d22;
-  color: #fefefe;
+  border: 1px solid var(--mainclr);
+  background-color: var(--bckgcolor);
+  color: var(--mainclr);
 }
 .cross:hover {
   cursor: pointer;
@@ -267,15 +273,15 @@ body {
   }
 }
 .endname h1 {
-  color: #fefefe;
+  color: var(--mainclr);
   font-size: 55px;
   font-weight: 600;
-  text-shadow: 2px 3px 4px #7a828f;
+  text-shadow: 2px 3px 4px var(--shadow);
   letter-spacing: 4px;
 }
 .endname p {
   font-size: 18px;
-  color: #fefefe;
+  color: var(--mainclr);
   font-weight: 125;
   letter-spacing: 2px;
 }
