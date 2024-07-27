@@ -43,10 +43,17 @@ const games = [
       "Challenge your friends or the computer in this classic game of Tic Tac Toe! Place your X's or O's in a row, column, or diagonal to win. Perfect for quick games and honing your strategic thinking skills. Relax your mind and enjoy the time with evoliving your thinking skills.",
     link: "tictactoe.html",
   },
+  {
+    title: "Snake Game",
+    subtitle: "Let's build your reflexes",
+    description:
+      "Challenge your friends or the computer in this classic game of Tic Tac Toe! Place your X's or O's in a row, column, or diagonal to win. Perfect for quick games and honing your strategic thinking skills. Relax your mind and enjoy the time with evoliving your thinking skills.",
+    link: "snakeg.html",
+  },
 ];
 
 logos.forEach((logo, index) => {
-  logo.addEventListener("mouseover", function () {
+  logo.addEventListener("click", function () {
     logobox.classList.add("hide");
     startBox.classList.add("hide");
     gametitle.textContent = games[index].title;
@@ -59,4 +66,10 @@ cross.addEventListener("click", function () {
   gamedetails.classList.add("hide");
   logobox.classList.remove("hide");
   startBox.classList.remove("hide");
+
+  startBox.classList.add("zoom-in");
+  logobox.classList.add("zoom-in");
+  logos.forEach((logo, index) => {
+    logo.classList.add("zoom-in");
+  });
 });
