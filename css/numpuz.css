@@ -41,6 +41,15 @@
   letter-spacing: 5px;
   text-shadow: 4px 6px 8px var(--shadow);
 }
+.game h3 {
+  text-align: center;
+  font-size: 30px;
+  color: var(--mainclr);
+  margin-bottom: 16px;
+  font-weight: 305;
+  letter-spacing: 3px;
+  text-shadow: 4px 6px 8px var(--shadow);
+}
 .puzzlebox {
   margin: 3px auto;
   display: flex;
@@ -59,4 +68,20 @@
   border: 1px solid var(--mainclr);
   font-size: 16px;
   color: var(--mainclr);
+}
+.btnfinal {
+  padding: 6px 10px;
+  background-color: var(--mainclr);
+  color: var(--bckgcolor);
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 12px;
+  margin: 18px auto;
+  width: 100px;
+}
+.btnfinal:hover {
+  transform: scale(1.2);
+  transition: 1s;
+  cursor: pointer;
 }
