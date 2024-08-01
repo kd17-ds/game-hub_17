@@ -8,24 +8,19 @@ let highestScore = Infinity;
 
 function countInversions(arr) {
   let inversionCount = 0;
-  const gridSize = 4; // 4x4 grid
 
-  // Convert 1D array to 2D grid
-  let grid = [];
-  for (let i = 0; i < arr.length; i += gridSize) {
-    grid.push(arr.slice(i, i + gridSize));
-  }
+  // ignoring the empty space
+  let flattened = arr.filter((num) => num !== undefined);
 
-  // Count inversions within each row
-  for (let row of grid) {
-    for (let i = 0; i < row.length; i++) {
-      for (let j = i + 1; j < row.length; j++) {
-        if (row[i] !== undefined && row[j] !== undefined && row[i] > row[j]) {
-          inversionCount++;
-        }
+  // Count inversions in the flattened array
+  for (let i = 0; i < flattened.length; i++) {
+    for (let j = i + 1; j < flattened.length; j++) {
+      if (flattened[i] > flattened[j]) {
+        inversionCount++;
       }
     }
   }
+
   return inversionCount;
 }
 
@@ -48,60 +43,63 @@ function shuffleNumbers() {
   });
 }
 
-btns.forEach((btn, index) => {
-  btn.addEventListener("click", () => {
-    // Movement for next block
-    if (
-      btn.innerText !== "" &&
-      (index + 1) % 4 !== 0 &&
-      index + 1 < btns.length &&
-      btns[index + 1].innerText === ""
-    ) {
-      btns[index + 1].innerText = btn.innerText;
-      btn.innerText = "";
-      moves++;
-    }
+function attachEventListeners() {
+  btns.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      // Movement for next block
+      if (
+        btn.innerText !== "" &&
+        (index + 1) % 4 !== 0 &&
+        index + 1 < btns.length &&
+        btns[index + 1].innerText === ""
+      ) {
+        btns[index + 1].innerText = btn.innerText;
+        btn.innerText = "";
+        moves++;
+      }
 
-    // Movement for below box
-    if (
-      btn.innerText !== "" &&
-      index + 4 < btns.length &&
-      btns[index + 4].innerText === "" &&
-      index <= 11
-    ) {
-      btns[index + 4].innerText = btn.innerText;
-      btn.innerText = "";
-      moves++;
-    }
+      // Movement for below box
+      if (
+        btn.innerText !== "" &&
+        index + 4 < btns.length &&
+        btns[index + 4].innerText === "" &&
+        index <= 11
+      ) {
+        btns[index + 4].innerText = btn.innerText;
+        btn.innerText = "";
+        moves++;
+      }
 
-    // Movement for Upper box
-    if (
-      btn.innerText !== "" &&
-      index - 4 >= 0 &&
-      btns[index - 4].innerText === ""
-    ) {
-      btns[index - 4].innerText = btn.innerText;
-      btn.innerText = "";
-      moves++;
-    }
+      // Movement for Upper box
+      if (
+        btn.innerText !== "" &&
+        index - 4 >= 0 &&
+        btns[index - 4].innerText === ""
+      ) {
+        btns[index - 4].innerText = btn.innerText;
+        btn.innerText = "";
+        moves++;
+      }
 
-    // Movement for back block
-    if (
-      btn.innerText !== "" &&
-      index - 1 >= 0 &&
-      index % 4 !== 0 &&
-      btns[index - 1].innerText === ""
-    ) {
-      btns[index - 1].innerText = btn.innerText;
-      btn.innerText = "";
-      moves++;
-    }
-    gameHead.innerText = ` Total Moves : ${moves}`;
-    checkIfSolved();
+      // Movement for back block
+      if (
+        btn.innerText !== "" &&
+        index - 1 >= 0 &&
+        index % 4 !== 0 &&
+        btns[index - 1].innerText === ""
+      ) {
+        btns[index - 1].innerText = btn.innerText;
+        btn.innerText = "";
+        moves++;
+      }
+      gameHead.innerText = ` Total Moves : ${moves}`;
+      checkIfSolved();
+    });
   });
-});
+}
 
 shuffleUntilSolvable();
+attachEventListeners();
 
 function checkIfSolved() {
   // Convert button states to an array
@@ -119,12 +117,46 @@ function checkIfSolved() {
   if (moves < highestScore) {
     highestScore = moves;
   }
-  game.innerHTML = `<h3> Woo Hoo !! You solved it in : ${moves} </h3>
-  </br> <h3>The Highest Score was ${highestScore}</h3>
-   <button class="btnfinal" onclick = "restartGame()">Try Again</button>`;
+  game.innerHTML = `<h3> Woo Hoo !! You solved it in : ${moves} moves</h3>
+  </br> <h4> Highest Score : ${highestScore} moves</h4>
+   <button class="btnfinal" onclick="restartGame()">Try Again</button>`;
 }
 
 function restartGame() {
-  shuffleUntilSolvable();
+  game.innerHTML = `
+  <h2 class="gameheading">Play Time</h2>
+    <div class="puzzlebox">
+      <div class="puzzlerow">
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+      </div>
+      <div class="puzzlerow">
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+      </div>
+      <div class="puzzlerow">
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+      </div>
+      <div class="puzzlerow">
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+      </div>
+    </div>`;
+
+  btns = document.querySelectorAll(".btn");
+
+  gameHead = document.querySelector(".gameheading");
+  shuffledNumbers = numbers.slice().sort(() => Math.random() - 0.5);
   moves = 0;
+  shuffleUntilSolvable();
+  attachEventListeners();
 }

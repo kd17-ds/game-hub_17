@@ -39,16 +39,23 @@
   margin-bottom: 16px;
   font-weight: 325;
   letter-spacing: 5px;
-  text-shadow: 4px 6px 8px var(--shadow);
+  text-shadow: 2px 3px 4px var(--shadow);
 }
 .game h3 {
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   color: var(--mainclr);
   margin-bottom: 16px;
   font-weight: 305;
-  letter-spacing: 3px;
-  text-shadow: 4px 6px 8px var(--shadow);
+  letter-spacing: 2px;
+}
+.game h4 {
+  text-align: center;
+  font-size: 20px;
+  color: var(--mainclr);
+  margin-bottom: 24px;
+  font-weight: 305;
+  letter-spacing: 2px;
 }
 .puzzlebox {
   margin: 3px auto;
@@ -70,18 +77,18 @@
   color: var(--mainclr);
 }
 .btnfinal {
-  padding: 6px 10px;
-  background-color: var(--mainclr);
-  color: var(--bckgcolor);
-  font-weight: 500;
+  padding: 10px 15px;
+  border: 2px solid var(--mainclr);
+  background-color: var(--bkcgcolor);
+  color: var(--mainclr);
+  font-weight: 300;
+  font-size: 18px;
   letter-spacing: 1px;
-  border: none;
   border-radius: 12px;
-  margin: 18px auto;
-  width: 100px;
+  margin: 25px auto;
 }
 .btnfinal:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 1s;
   cursor: pointer;
 }
