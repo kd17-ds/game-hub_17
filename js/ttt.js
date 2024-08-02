@@ -7,18 +7,20 @@ buttons.forEach((btn, index) => {
     if (btn.innerText === "" && Arr.length <= 8) {
       btn.innerText = "X";
       Arr.push("X");
-    }
-    if (Arr.length <= 8) {
-      let randIndex = getRndInteger(0, 8);
-      while (buttonsArr[randIndex].innerText !== "") {
-        randIndex = getRndInteger(0, 8);
-      }
 
-      setTimeout(() => {
-        buttonsArr[randIndex].innerText = "O";
-        Arr.push("O");
-        checkWinner();
-      }, 250);
+      if (Arr.length <= 8) {
+        let randIndex = getRndInteger(0, 8);
+        while (buttonsArr[randIndex].innerText !== "") {
+          randIndex = getRndInteger(0, 8);
+        }
+
+        setTimeout(() => {
+          buttonsArr[randIndex].innerText = "O";
+          Arr.push("O");
+          checkWinner();
+        }, 80);
+      }
+      checkWinner();
     }
   });
 });
