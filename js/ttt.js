@@ -30,40 +30,27 @@ function getRndInteger(min, max) {
 }
 
 function checkWinner() {
-  if (
-    (buttonsArr[0].innerText !== "" &&
-      buttonsArr[0].innerText !== undefined &&
-      buttonsArr[0].innerText === buttonsArr[1].innerText &&
-      buttonsArr[1].innerText === buttonsArr[2].innerText) || // First row
-    (buttonsArr[3].innerText !== "" &&
-      buttonsArr[3].innerText !== undefined &&
-      buttonsArr[3].innerText === buttonsArr[4].innerText &&
-      buttonsArr[4].innerText === buttonsArr[5].innerText) || // Second row
-    (buttonsArr[6].innerText !== "" &&
-      buttonsArr[6].innerText !== undefined &&
-      buttonsArr[6].innerText === buttonsArr[7].innerText &&
-      buttonsArr[7].innerText === buttonsArr[8].innerText) || // Third row
-    (buttonsArr[0].innerText !== "" &&
-      buttonsArr[0].innerText !== undefined &&
-      buttonsArr[0].innerText === buttonsArr[3].innerText &&
-      buttonsArr[3].innerText === buttonsArr[6].innerText) || // First column
-    (buttonsArr[1].innerText !== "" &&
-      buttonsArr[1].innerText !== undefined &&
-      buttonsArr[1].innerText === buttonsArr[4].innerText &&
-      buttonsArr[4].innerText === buttonsArr[7].innerText) || // Second column
-    (buttonsArr[2].innerText !== "" &&
-      buttonsArr[2].innerText !== undefined &&
-      buttonsArr[2].innerText === buttonsArr[5].innerText &&
-      buttonsArr[5].innerText === buttonsArr[8].innerText) || // Third column
-    (buttonsArr[0].innerText !== "" &&
-      buttonsArr[0].innerText !== undefined &&
-      buttonsArr[0].innerText === buttonsArr[4].innerText &&
-      buttonsArr[4].innerText === buttonsArr[8].innerText) || // Diagonal
-    (buttonsArr[2].innerText !== "" &&
-      buttonsArr[2].innerText !== undefined &&
-      buttonsArr[2].innerText === buttonsArr[4].innerText &&
-      buttonsArr[4].innerText === buttonsArr[6].innerText) // Diagonal
-  ) {
-    console.log("Winner is found");
+  let combinationsArr = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
+  for (let i = 0; i < combinationsArr.length; i++) {
+    const [a, b, c] = combinationsArr[i];
+    if (
+      buttonsArr[a].innerText !== "" &&
+      buttonsArr[a].innerText !== undefined &&
+      buttonsArr[a].innerText === buttonsArr[b].innerText &&
+      buttonsArr[b].innerText === buttonsArr[c].innerText
+    ) {
+      console.log("systum");
+      return;
+    }
   }
 }
