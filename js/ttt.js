@@ -2,6 +2,11 @@ let buttons = document.querySelectorAll(".btn");
 let Arr = [];
 let buttonsArr = Array.from(buttons);
 let gameEnded = false;
+let heading = document.querySelector(".heading_box");
+let game = document.querySelector(".game");
+let restartBtn = document.createElement("button");
+restartBtn.className = "restart_btn";
+restartBtn.setAttribute("onclick", "restartGame()");
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", handleClick);
@@ -16,7 +21,7 @@ function handleClick(event) {
     if (Arr.length < 9) {
       setTimeout(() => {
         placeO();
-      }, 80);
+      }, 75);
     }
   }
 }
@@ -78,8 +83,11 @@ function placeO() {
       if (checkWinner()) return;
       return;
     }
-    // To put O if X has a chance to win
-    else if (
+  }
+  // To put O if X has a chance to win
+  for (let i = 0; i < combinationsArr.length; i++) {
+    const [a, b, c] = combinationsArr[i];
+    if (
       buttonsArr[a].innerText === "X" &&
       buttonsArr[b].innerText === "X" &&
       buttonsArr[c].innerText === ""
@@ -135,7 +143,16 @@ function checkWinner() {
       buttonsArr[a].innerText === buttonsArr[b].innerText &&
       buttonsArr[a].innerText === buttonsArr[c].innerText
     ) {
-      console.log(`Winner: ${buttonsArr[a].innerText}`);
+      if (buttonsArr[a].innerText === "O") {
+        heading.innerHTML = `<h1 class="heading_box"> Ohh No  !! You Lost </h1>`;
+        restartBtn.innerText = "Try again";
+        game.appendChild(restartBtn);
+      } else {
+        heading.innerHTML = `<h1 class="heading_box"> Great Job  !! You Won </h1>`;
+        restartBtn.innerText = "Play again";
+        game.appendChild(restartBtn);
+      }
+
       gameEnded = true;
       buttons.forEach((btn) => {
         btn.removeEventListener("click", handleClick);
@@ -143,5 +160,22 @@ function checkWinner() {
       return true;
     }
   }
+  if (Arr.length === 9) {
+    heading.innerHTML = `<h1 class="heading_box"> Well Tried  !! Match Draw </h1>`;
+    restartBtn.innerText = "Try again";
+    game.appendChild(restartBtn);
+  }
   return false;
+}
+
+function restartGame() {
+  Arr = [];
+  gameEnded = false;
+  heading.innerHTML = `<h1 class="heading_box"> Let's Play </h1>`;
+  restartBtn.remove();
+
+  buttons.forEach((btn) => {
+    btn.innerText = "";
+    btn.addEventListener("click", handleClick);
+  });
 }

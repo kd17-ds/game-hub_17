@@ -13,6 +13,9 @@
 body {
   background-color: var(--bckgcolor);
 }
+a {
+  text-decoration: none;
+}
 .head_box {
   display: flex;
   justify-content: space-between;
