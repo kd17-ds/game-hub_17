@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/memory.css" />
+  </head>
+  <body>
+    <div class="head_box">
+      <a href="memory.html">
+        <h1 class="main_heading animate__animated animate__backInLeft">
+          Memory Game
+        </h1>
+      </a>
+      <a href="index.html">
+        <img
+          class="animate__animated animate__rotateIn"
+          src="img/mg-logo.png"
+          alt="Logo"
+        />
+      </a>
+    </div>
+    <div class="gamebox animate__animated animate__fadeInUp">
+      <div class="instr_box">
+        <h2>Instructions</h2>
+        <ul>
+          <li>Click on the "Start" button to begin the memory game.</li>
+          <li>Flip over two cards to reveal their symbols.</li>
+          <li>
+            If the symbols on the two cards match, they will remain face-up. If
+            they do not match, they will be flipped back down.
+          </li>
+          <li>
+            Use your memory to recall the positions of previously revealed cards
+            to match pairs more effectively.
+          </li>
+          <li>The game is won when all pairs are successfully matched.</li>
+          <li>Your time and number of moves will be tracked as you play.</li>
+          <li>Click "Restart" to shuffle the cards and play again.</li>
+          <li>Press the Game Icon to get back to the Home page.</li>
+        </ul>
+      </div>
+      <div class="game"></div>
+    </div>
+    <div class="endname">
+      <h1>D.S</h1>
+      <p>Divyansh Sharma © All rights reserved.</p>
+    </div>
+    <script src="js/mg.js"></script>
+  </body>
+</html>

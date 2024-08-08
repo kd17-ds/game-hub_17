@@ -1,33 +1,5 @@
-.gamebox {
-  margin: 2rem 3rem;
-  display: flex;
-  border: 1px solid var(--mainclr);
-  border-radius: 22px;
-}
 .instr_box {
-  border-right: 1px solid var(--mainclr);
-  padding: 1.5rem 3rem;
   width: 730px;
-  line-height: 1.5;
-}
-.instr_box h2 {
-  text-align: center;
-  font-size: 35px;
-  color: var(--mainclr);
-  margin-bottom: 12px;
-  font-weight: 400;
-  letter-spacing: 4px;
-}
-.instr_box li {
-  margin-top: 10px;
-  color: var(--mainclr);
-  font-weight: 125;
-  letter-spacing: 1px;
-}
-.game {
-  padding: 2rem 3rem;
-  text-align: center;
-  width: 100%;
 }
 .startbtn button {
   position: absolute;
