@@ -1,3 +1,30 @@
 .instr_box {
   width: 700px;
 }
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.card-row {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.mgcard {
+  width: 94px;
+  height: 75px;
+  background-color: var(--mainclr);
+  padding: 10px 12px;
+  border-radius: 22px;
+}
+.mgcard img {
+  width: 70px;
+  height: 55px;
+}
