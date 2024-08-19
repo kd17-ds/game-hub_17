@@ -35,7 +35,6 @@ displayImages();
 
 setTimeout(() => {
   images.forEach((image, index) => {
-    console.log(image);
     image.classList.add("animate__flipInY");
     image.innerHTML = "";
   });
@@ -47,5 +46,19 @@ images.forEach((image, index) => {
     src=${shuffledImages[index]}
     alt=""
   />`;
+
+    let img = image.querySelector("img");
+
+    images.forEach((photo, i) => {
+      if (i != index && photo.innerHTML !== "") {
+        let p = photo.querySelector("img");
+        if (p.src !== img.src) {
+          setTimeout(() => {
+            image.innerHTML = "";
+            photo.innerHTML = "";
+          }, 1000);
+        }
+      }
+    });
   });
 });
