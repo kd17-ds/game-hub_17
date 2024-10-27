@@ -86,3 +86,57 @@ a {
   font-weight: 125;
   letter-spacing: 2px;
 }
+
+/* Styles for tablets in landscape and small desktops */
+@media only screen and (max-width: 1100px) {
+  .gamebox {
+    flex-direction: column;
+  }
+  .instr_box {
+    border-right: 0px solid var(--mainclr);
+    padding: 2rem 5rem 4rem;
+    width: 100%;
+    line-height: 1.8;
+    border-bottom: 1px solid var(--mainclr);
+  }
+  .instr_box h2 {
+    font-size: 45px;
+    margin-bottom: 18px;
+  }
+  .instr_box li {
+    margin-top: 12px;
+    font-size: 18px;
+  }
+}
+
+/* Styles for tablets in portrait mode */
+@media only screen and (max-width: 767px) {
+  .head_box {
+    margin: 1rem 2.5rem;
+  }
+  .head_box h1 {
+    font-size: 2.5rem;
+  }
+  .logoImgWidth {
+    width: 70px;
+  }
+
+  .gamebox {
+    flex-direction: column;
+  }
+  .instr_box {
+    border-right: 0px solid var(--mainclr);
+    padding: 2rem 5rem 4rem;
+    width: 100%;
+    line-height: 1.8;
+    border-bottom: 1px solid var(--mainclr);
+  }
+  .instr_box h2 {
+    font-size: 45px;
+    margin-bottom: 18px;
+  }
+  .instr_box li {
+    margin-top: 12px;
+    font-size: 18px;
+  }
+}

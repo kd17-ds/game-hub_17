@@ -1,0 +1,31 @@
+/* Styles for large desktops */
+@media only screen  and (max-width: 2000px) {
+}
+
+/* Styles for standard desktops and laptops */
+@media only screen and (max-width: 1439px) {
+}
+
+/* Styles for tablets in landscape and small desktops */
+@media only screen and (max-width: 1024px) {
+}
+
+/* Styles for tablets in portrait mode */
+@media only screen and (max-width: 767px) {
+}
+
+/* Styles for large mobile devices like iPhone Plus models */
+@media only screen and (max-width: 480px) {
+}
+
+/* Styles for standard mobile devices like iPhone X and Galaxy S models */
+@media only screen and (max-width: 413px) {
+}
+
+/* Styles for smaller smartphones (e.g., older iPhones, smaller Android devices) */
+@media only screen and (max-width: 374px) {
+}
+
+/* Styles for very small devices (e.g., feature phones, very old smartphones) */
+@media only screen and (max-width: 319px) {
+}

@@ -15,6 +15,7 @@
 
 body {
   background-color: var(--bckgcolor);
+  overflow-x: hidden;
 }
 
 .container {
@@ -23,6 +24,7 @@ body {
   place-items: center;
   height: 100vh;
   width: 100vw;
+  padding: 0px;
 }
 
 .start_box {
@@ -246,20 +248,6 @@ body {
   transition: 1s;
 }
 
-.zoom-in {
-  animation: zoomIn 1s forwards;
-}
-@keyframes zoomIn {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 .endname {
   text-align: center;
   animation: entrance 4s ease;
@@ -287,4 +275,591 @@ body {
 }
 .hide {
   display: none;
+}
+
+/* Styles for tablets in portrait mode */
+@media only screen and (max-width: 700px) {
+  .image_box {
+    width: 530px;
+    animation: revolve 3s ease;
+  }
+  @keyframes revolve {
+    from {
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(360deg);
+    }
+  }
+
+  .start_box img {
+    width: 300px;
+  }
+
+  .gg {
+    top: 0px;
+    left: 225px;
+    animation: moveout 3s ease-in-out;
+  }
+  @keyframes moveout {
+    0% {
+      top: 212.5px;
+      left: 225px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 0px;
+      left: 225px;
+      opacity: 1;
+    }
+  }
+
+  .pz {
+    top: 120px;
+    right: 430px;
+    animation: moveout1 3s ease-in-out;
+  }
+  @keyframes moveout1 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 120px;
+      opacity: 1;
+    }
+  }
+
+  .mg {
+    right: 430px;
+    bottom: 110px;
+    animation: moveout3 3s ease-in-out;
+  }
+  @keyframes moveout3 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 110px;
+      opacity: 1;
+    }
+  }
+
+  .sg {
+    bottom: 0px;
+    left: 225px;
+    animation: moveout6 3s ease-in-out;
+  }
+  @keyframes moveout6 {
+    0% {
+      bottom: 212.5px;
+      left: 225px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 0px;
+      left: 225px;
+      opacity: 1;
+    }
+  }
+
+  .ttt {
+    bottom: 110px;
+    right: 20px;
+    animation: moveout4 3s ease-in-out;
+  }
+  @keyframes moveout4 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 110px;
+      opacity: 1;
+      right: 20px;
+    }
+  }
+
+  .ss {
+    top: 120px;
+    right: 20px;
+    animation: moveout2 3s ease-in-out;
+  }
+  @keyframes moveout2 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 120px;
+      right: 20px;
+      opacity: 1;
+    }
+  }
+}
+
+/* Styles for tablets in portrait mode */
+@media only screen and (max-width: 575px) {
+  .start_box img {
+    width: 220px;
+  }
+  .image_box {
+    width: 400px;
+    animation: revolve 3s ease;
+  }
+  @keyframes revolve {
+    from {
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(360deg);
+    }
+  }
+
+  .gg {
+    top: 30px;
+    left: 160px;
+  }
+  @keyframes moveout {
+    0% {
+      top: 212.5px;
+      left: 160px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 30px;
+      left: 160px;
+      opacity: 1;
+    }
+  }
+
+  .pz {
+    top: 130px;
+    right: 330px;
+  }
+  @keyframes moveout1 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 130px;
+      opacity: 1;
+    }
+  }
+
+  .mg {
+    bottom: 120px;
+    right: 330px;
+  }
+  @keyframes moveout3 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 120px;
+      opacity: 1;
+    }
+  }
+
+  .sg {
+    bottom: 30px;
+    left: 160px;
+  }
+  @keyframes moveout6 {
+    0% {
+      bottom: 212.5px;
+      left: 160px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 30px;
+      left: 160px;
+      opacity: 1;
+    }
+  }
+
+  .ttt {
+    right: 0px;
+    bottom: 120px;
+  }
+  @keyframes moveout4 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 120px;
+      opacity: 1;
+      right: 0px;
+    }
+  }
+
+  .ss {
+    right: 0px;
+    top: 130px;
+  }
+  @keyframes moveout2 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 130px;
+      right: 0px;
+      opacity: 1;
+    }
+  }
+
+  .gamedetails {
+    width: 400px;
+  }
+  .cross {
+    padding: 5px 13px;
+  }
+}
+
+/* Styles for large mobile devices like iPhone Plus models */
+@media only screen and (max-width: 490px) {
+  .start_box img {
+    width: 180px;
+  }
+  .image_box img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .gg {
+    top: 60px;
+    left: 165px;
+  }
+  @keyframes moveout {
+    0% {
+      top: 212.5px;
+      left: 165px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 60px;
+      left: 165px;
+      opacity: 1;
+    }
+  }
+
+  .pz {
+    top: 140px;
+    right: 320px;
+  }
+  @keyframes moveout1 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 140px;
+      opacity: 1;
+    }
+  }
+
+  .mg {
+    bottom: 130px;
+    right: 320px;
+  }
+  @keyframes moveout3 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 130px;
+      opacity: 1;
+    }
+  }
+
+  .sg {
+    bottom: 60px;
+    left: 165px;
+  }
+  @keyframes moveout6 {
+    0% {
+      bottom: 212.5px;
+      left: 165px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 60px;
+      left: 165px;
+      opacity: 1;
+    }
+  }
+
+  .ttt {
+    right: 20px;
+    bottom: 130px;
+  }
+  @keyframes moveout4 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 130px;
+      opacity: 1;
+      right: 20px;
+    }
+  }
+
+  .ss {
+    right: 20px;
+    top: 140px;
+  }
+  @keyframes moveout2 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 140px;
+      right: 20px;
+      opacity: 1;
+    }
+  }
+  .container {
+    margin: 0px 0px 0px 0px;
+  }
+  .gamedetails {
+    width: 350px;
+  }
+}
+
+/* Styles for standard mobile devices like iPhone X and Galaxy S models */
+@media only screen and (max-width: 413px) {
+  .start_box img {
+    width: 150px;
+  }
+  .image_box img {
+    width: 60px;
+    height: 60px;
+  }
+  .image_box {
+    width: 320px;
+    animation: revolve 3s ease;
+  }
+  @keyframes revolve {
+    from {
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(360deg);
+    }
+  }
+
+  .gg {
+    top: 100px;
+    left: 130px;
+  }
+  @keyframes moveout {
+    0% {
+      top: 212.5px;
+      left: 130px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 100px;
+      left: 130px;
+      opacity: 1;
+    }
+  }
+
+  .pz {
+    top: 165px;
+    right: 250px;
+  }
+  @keyframes moveout1 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 165px;
+      opacity: 1;
+    }
+  }
+
+  .mg {
+    bottom: 155px;
+    right: 250px;
+  }
+  @keyframes moveout3 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 155px;
+      opacity: 1;
+    }
+  }
+
+  .sg {
+    bottom: 100px;
+    left: 130px;
+  }
+  @keyframes moveout6 {
+    0% {
+      bottom: 212.5px;
+      left: 130px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 100px;
+      left: 130px;
+      opacity: 1;
+    }
+  }
+
+  .ttt {
+    right: 15px;
+    bottom: 155px;
+  }
+  @keyframes moveout4 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 155px;
+      opacity: 1;
+      right: 15px;
+    }
+  }
+
+  .ss {
+    right: 15px;
+    top: 165px;
+  }
+  @keyframes moveout2 {
+    0% {
+      top: 212.5px;
+      left: 240px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      top: 165px;
+      right: 15px;
+      opacity: 1;
+    }
+  }
+  .gamedetails {
+    width: 320px;
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 1s forwards;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
