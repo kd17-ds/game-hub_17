@@ -20,7 +20,7 @@ const games = [
     subtitle: "Time to enhance your Memory",
     description:
       "Embark on a journey to sharpen your memory with our captivating memory game! Immerse yourself in a world of challenges as you flip cards to find matching pairs. Test your cognitive skills across various levels of difficulty, from novice to expert. Are you ready to become a memory master?",
-    link: "memory.html",
+    // link: "memory.html",
   },
   {
     title: "Number Puzzle",
@@ -48,7 +48,6 @@ const games = [
     subtitle: "Let's build your reflexes",
     description:
       "Challenge your friends or the computer in this classic game of Tic Tac Toe! Place your X's or O's in a row, column, or diagonal to win. Perfect for quick games and honing your strategic thinking skills. Relax your mind and enjoy the time with evoliving your thinking skills.",
-    link: "snakeg.html",
   },
 ];
 
@@ -57,11 +56,16 @@ logos.forEach((logo, index) => {
     logobox.classList.add("hide");
     startBox.classList.add("hide");
     gametitle.textContent = games[index].title;
-    gamedescr.textContent = games[index].description;
-    playbtn.href = games[index].link;
+    if (!games[index].link) {
+      gamedescr.textContent = "Game in Development Phase !! Launching Soon.";
+    } else {
+      gamedescr.textContent = games[index].description;
+      playbtn.href = games[index].link;
+    }
     gamedetails.classList.remove("hide");
   });
 });
+
 cross.addEventListener("click", function () {
   gamedetails.classList.add("hide");
   logobox.classList.remove("hide");
